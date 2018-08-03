@@ -1,0 +1,41 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "end to end tests for budgeting app",
+  "main": "wdio.config.js",
+  "scripts": {
+    "local-webserver": "npm start --prefix=../",
+    "test": "node node_modules/webdriverio/bin/wdio; wdio_ret=$?; forever stopall",
+    "allure-report": "node_modules/.bin/allure generate ./reports/allure-results -c && allure open",
+    "selenium-start": "node_modules/.bin/selenium-standalone start"
+  },
+  "keywords": [
+    "selenium",
+    "web",
+    "testing",
+    "webdriver",
+    "automation"
+  ],
+  "author": "Heber Parrucci <heber013@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "allure-commandline": "^2.5.0",
+    "babel-register": "^6.3.13",
+    "chai": "3.5.0",
+    "cucumber": "^0.10.4",
+    "wdio-cucumber-framework": "~0.1.0",
+    "webdriverio": "4.13.0",
+    "wdio-selenium-standalone-service": "~0.0.9",
+    "wdio-allure-reporter": "~0.5.0",
+    "wdio-junit-reporter": "~0.4.4",
+    "wdio-spec-reporter": "~0.1.2",
+    "wdio-json-reporter": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "~6.26.3",
+    "babel-polyfill": "~6.26.0",
+    "eslint": "~5.0.0",
+    "forever": "~0.15.3"
+  }
+
+}
