@@ -11,7 +11,8 @@ The ones that have not been automated are marked as @Pending and will not be exe
 ### Prerequisites
 
 This project is tested on ***Node v8.10.0***.  While earlier versions of node may be compatible, they have not been tested or verified.
-`Chrome browser`.
+
+`Chrome browser`: Tests were executed on versions Version 67 and 68 on Ubuntu platform, but should work properly with earlier versions as well.
 
 `JDK 1.8:` Install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` nothing else.
 
