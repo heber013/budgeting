@@ -57,7 +57,7 @@ exports.config = {
     source: false, // <boolean> hide source uris
     profile: [], // <string[]> (name) specify the profile to use
     strict: true, // <boolean> fail if there are any undefined or pending steps
-    tagExpression: 'not @Pending', // <string> (expression) only execute the features or scenarios with tags matching the expression, see https://docs.cucumber.io/tag-expressions/
+    tags: ['~@Pending'], // <string> (expression) only execute the features or scenarios with tags matching the expression, see https://docs.cucumber.io/tag-expressions/
     timeout: defaultTimeoutInterval, // <number> timeout for step definitions
     tagsInTitle: false, // <boolean> add cucumber tags to feature or scenario name
     snippetSyntax: undefined, // <string> specify a custom snippet syntax

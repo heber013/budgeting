@@ -1,10 +1,17 @@
-### E2E tests implementation for a buggeting app using WebdriverIO code with Cucumber BDD
+### E2E tests implementation for a budgeting app using WebdriverIO code with Cucumber BDD
 
 This repository contains examples of tests implementations using webdriverIO (Selenium - Node.js/JavaScript) It generates Spec, JUNIT, Allure, JSON reporters as well.
+
+### Tests Scenarios:
+As part of the tests plan, different scenarios were written, both negative and positives. You can find the scenarios here:
+e2e/features
+
+The ones that have not been automated are marked as @Pending and will not be executed by default. Also, there is one scenario marked as @ShouldFail that fails on purpose.
 
 ### Prerequisites
 
 This project is tested on ***Node v8.10.0***.  While earlier versions of node may be compatible, they have not been tested or verified.
+`Chrome browser`.
 
 `JDK 1.8:` Install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` nothing else.
 
@@ -17,12 +24,17 @@ Once installation is done - open terminal (MAC OSX) or command prompt (for windo
 
 Above command should print out the version that you have installed.
 
-Now navigate to e2e folder and run `npm install` to grab all dependencies.
+Navigate to root folder and run `npm install` to grab all dependencies for the application.
+Now navigate to e2e folder and run `npm install` to grab all dependencies for testing framework.
+To start the app you can run (located in e2e folder):
 
+`npm run local-webserver`
+
+You can run it in background or leave it running and open a new terminal/command prompt to run the tests.
 
 ### Run Tests
 
-To execute the entire test suite in local development, you can use any one of the options mentioned below
+To execute the entire test suite in local development, located in e2e folder, you can execute:
 
 `npm run test`
 
@@ -61,7 +73,6 @@ You can also place reusable functions or logic inside of these pages and call th
 An object called `Page` will be created with the prototype model or by ES6 class pattern.  This ensures that every instance of a page object is exported as a stateless construct. Any any changes to that state are handled in the browser, rather than on the server.
 
 It is preferable to separate page objects into individual files that end with `.page.js`.  These will require the basic `page.js` prototype construct / abstract class and create new objects for each individual page. For more information on the implementation, refer to the `/test/pageobjects` directory.
-
 
 
 ### Licensing

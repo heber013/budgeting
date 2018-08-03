@@ -48,32 +48,36 @@ Feature: Performing a budget
     Given I have a working balance equals to Z
     When I add "School" with description "institute" and value "0"
     Then The working balance has increased in 100
-#
-#  Scenario: Verify that I can only add numbers in value field
-#    Given The Add button is disabled
-#    When I write "asdklj" in amount field
-#    Then The amount field keeps empty
-#    And The Add button is disabled
-#
+    # To make this test pass: Comment the previous step and uncomment the following:
+    # Then The working balance has not changed
 
-#
-#  Scenario: Verify that when I add a negative value as income it is converted to positive
-#    Given I have a total inflow equals to X
-#    And I have a total outflow equals to Y
-#    And I have a working balance equals to X-Y
-#    When I add an income with description "salary" and value -Z
-#    Then The total inflow is X+Z
-#    And The working balance is X+Z-Y
-#
-#  Scenario: Verify that when I add a negative value as outcome it is kept as negative.
-#    Given I have a total inflow equals to X
-#    And I have a total outflow equals to Y
-#    And I have a working balance equals to X-Y
-#    When I add an outcome of category "Misc", description "Institute" and amount -Z
-#    Then The total outflow is Y+Z
-#    And The working balance is X-Y-Z
-#
-#  Scenario: Verify that I can enter a number with two decimals of precision in value field
-#    Given I have a working balance equals to X
-#    When I add an income with description "Salary" and amount Y.ZZ
-#    Then The working balance is X+Y.ZZ
+  @Pending
+  Scenario: Verify that I can only add numbers in value field
+    Given The Add button is disabled
+    When I write "asdklj" in amount field
+    Then The amount field keeps empty
+    And The Add button is disabled
+
+  @Pending
+  Scenario: Verify that when I add a negative value as income it is converted to positive
+    Given I have a total inflow equals to X
+    And I have a total outflow equals to Y
+    And I have a working balance equals to X-Y
+    When I add an income with description "salary" and value -Z
+    Then The total inflow is X+Z
+    And The working balance is X+Z-Y
+
+  @Pending
+  Scenario: Verify that when I add a negative value as outcome it is kept as negative.
+    Given I have a total inflow equals to X
+    And I have a total outflow equals to Y
+    And I have a working balance equals to X-Y
+    When I add an outcome of category "Misc", description "Institute" and amount -Z
+    Then The total outflow is Y+Z
+    And The working balance is X-Y-Z
+
+  @Pending
+  Scenario: Verify that I can enter a number with two decimals of precision in value field
+    Given I have a working balance equals to X
+    When I add an income with description "Salary" and amount Y.ZZ
+    Then The working balance is X+Y.ZZ

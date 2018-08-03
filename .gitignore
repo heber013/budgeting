@@ -12,3 +12,4 @@ coverage
 /.cache-loader
 /.vscode
 /e2e/reports
+/e2e/allure-report
