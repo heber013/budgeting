@@ -12,31 +12,31 @@ Feature: Performing a budget
     And I have a total outflow equals to Y
     And I have a working balance equals to X-Y
     When I add "Income" with description "salary" and value "150"
-    Then The total inflow is "X" + 150
-    And The working balance has increased in 150
+    Then The total inflow is "X" + 150.00
+    And The working balance has increased in 150.00
 
   Scenario: Verify that adding an outcome decrease the working balance
     Given I have a total inflow equals to X
     And I have a total outflow equals to Y
     And I have a working balance equals to X-Y
     When I add "School" with description "fee" and value "100"
-    Then The total outflow is "Y" + 100
-    And The working balance has decreased in 100
+    Then The total outflow is "Y" + 100.00
+    And The working balance has decreased in 100.00
 
   Scenario: Verify that description is optional when adding an income
     Given I have a working balance equals to Z
     When I add "Income" with description "" and value "100"
-    Then The working balance has increased in 100
+    Then The working balance has increased in 100.00
 
   Scenario: Verify that description is optional when adding an outcome
     Given I have a working balance equals to Z
     When I add "School" with description "" and value "100"
-    Then The working balance has decreased in 100
+    Then The working balance has decreased in 100.00
 
   Scenario: Verify that I can add a row with special characters in description field
     Given I have a working balance equals to Z
     When I add "Income" with description "#$%&/" and value "100"
-    Then The working balance has increased in 100
+    Then The working balance has increased in 100.00
 
   Scenario: Verify that adding an income with amount zero does not change the working balance
     Given I have a working balance equals to Z
@@ -47,7 +47,7 @@ Feature: Performing a budget
   Scenario: Verify that adding an outcome with amount zero does not change the working balance
     Given I have a working balance equals to Z
     When I add "School" with description "institute" and value "0"
-    Then The working balance has increased in 100
+    Then The working balance has increased in 100.00
     # To make this test pass: Comment the previous step and uncomment the following:
     # Then The working balance has not changed
 

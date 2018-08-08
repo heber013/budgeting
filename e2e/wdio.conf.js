@@ -37,7 +37,7 @@ exports.config = {
     allure: {
       outputDir: './reports/allure-results/',
       disableWebdriverStepsReporting: false,
-      useCucumberStepReporter: true,
+      useCucumberStepReporter: false,
     },
   },
 
@@ -51,13 +51,13 @@ exports.config = {
     failFast: false, // <boolean> abort the run on first failure
     ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings
     name: [], // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-    snippets: false, // <boolean> hide step definition snippets for pending steps
+    snippets: true, // <boolean> hide step definition snippets for pending steps
     format: ['pretty'], // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
     colors: true, // <boolean> disable colors in formatter output
     source: false, // <boolean> hide source uris
     profile: [], // <string[]> (name) specify the profile to use
     strict: true, // <boolean> fail if there are any undefined or pending steps
-    tags: ['~@Pending'], // <string> (expression) only execute the features or scenarios with tags matching the expression, see https://docs.cucumber.io/tag-expressions/
+    tagExpression: 'not @Pending', // <string> (expression) only execute the features or scenarios with tags matching the expression, see https://docs.cucumber.io/tag-expressions/
     timeout: defaultTimeoutInterval, // <number> timeout for step definitions
     tagsInTitle: false, // <boolean> add cucumber tags to feature or scenario name
     snippetSyntax: undefined, // <string> specify a custom snippet syntax
